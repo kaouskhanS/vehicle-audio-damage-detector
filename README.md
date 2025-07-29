@@ -53,38 +53,14 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 
 
-#5. Access the App:
-Open your browser and go to:
-http://localhost:8000/docs – for Swagger UI
+📁 File Structure
 
-
-
-#🌍 Deployment Options
-
-🟢 Deploy on Render:
-
-1.Connect your GitHub repo
-
-2.Add build command: pip install -r requirements.txt
-
-3.Start command: uvicorn main:app --host=0.0.0.0 --port=10000
-
-4.Add environment variables if needed (e.g., Mongo URI)
-
-
-🟡 Deploy on Railway:
-
-1.Connect GitHub → Auto deploys
-
-2.Add service variables for DB, ports, etc.
-
-📂 Folder Structure:
-/vehicle-audio-damage-detector
-├── backend/
-│   ├── main.py
-│   ├── ml_model/
-│   └── utils/
-├── frontend/ (if present)
+vehicle-audio-damage-detector/
+│
+├── main.py                # FastAPI backend
+├── model/                 # ML model + sound processing
+├── templates/             # Frontend HTML
+├── static/                # CSS/JS files
+├── database.py            # MongoDB interface
 ├── requirements.txt
-├── .gitignore
 └── README.md
